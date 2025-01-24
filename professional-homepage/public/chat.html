@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fa;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333333;
+}
+
+.chatbox {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    height: 400px;
+    overflow-y: auto;
+    background-color: #ffffff;
+}
+
+.user-input {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+#userMessage {
+    width: 75%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff; /* Primary color */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for button effect */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.chat-message {
+    margin-bottom: 10px; 
+}
+
+.chat-message strong {
+    color: #007bff; /* Color for user and bot labels */
+}
+
+.user-message {
+    background-color: #d1ecf1; /* Light blue for user messages */
+    padding: 8px; 
+    border-radius: 5px; 
+}
+
+.chatbot-message {
+    background-color: #f8f9fa; /* Light gray for bot messages */
+    padding: 8px; 
+    border-radius: 5px; 
+}
+
+        
+    </style>
+</head>
+<body>
+
+<h1>Capital Chatbot</h1>
+<div id="chatbox"></div>
+
+<div id="userInput">
+    <input type="text" id="userMessage" placeholder="Type your message here..." />
+    <button onclick="sendMessage()">Send</button>
+</div>
+
+<script>
+    const API_KEY = "AIzaSyAPCWYCtTB_TivgGt9yNaYXXivxVFjijTw"; // Add your API key here
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${API_KEY}`;
+
+    function sendMessage() {
+        const userMessage = document.getElementById("userMessage").value.trim();
+        if (userMessage === "") return;
+
+        // Display user's message
+        const chatbox = document.getElementById("chatbox");
+        chatbox.innerHTML += `<div class="chat-message user-message"><strong>You:</strong> ${userMessage}</div>`;
+        document.getElementById("userMessage").value = ""; // Clear input
+
+        // Prepare payload
+        const payload = {
+            "contents": [
+                {
+                    "parts": [
+                        {
+                            "text": userMessage
+                        }
+                    ]
+                }
+            ]
+        };
+
+        // Send request to the API
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload)
+        })
+        .then(response => response.json())
+        .then(data => {
+            const botResponse = data.candidates[0].content.parts[0].text;
+            chatbox.innerHTML += `<div class="chat-message chatbot-message"><strong>Chatbot:</strong> ${botResponse}</div>`;
+            chatbox.scrollTop = chatbox.scrollHeight; // Scroll to bottom
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            chatbox.innerHTML += `<div class="chat-message"><strong>Error:</strong> Unable to get response.</div>`;
+        });
+}
+
+</script>
+
+</body>
+</html>

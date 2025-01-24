@@ -1,0 +1,48 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #333;
+    --text-color: #fff;
+    --background-light: #f8f9fa;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+  
+  a:hover {
+    color: #0056b3;
+  }
+  
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  .home-container {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .hero {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cta-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cta-button:hover {
+    background-color: #0056b3;
+  }
+  

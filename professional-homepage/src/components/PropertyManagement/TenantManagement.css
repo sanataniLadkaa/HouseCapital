@@ -1,0 +1,406 @@
+/* General Styling */
+.tenant-management {
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Banner Section */
+.banner {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 30px 15px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.banner h1 {
+  font-size: 2.8rem;
+  color: #0078d7;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.banner .add-btn {
+  background-color: #0078d7;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.banner .add-btn:hover {
+  background-color: #0056a6;
+  transform: translateY(-2px);
+}
+
+/* Table Styling */
+.tenant-table {
+  margin-top: 20px;
+  overflow-x: auto;
+  border-radius: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+  background-color: #0078d7;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+td {
+  background-color: #ffffff;
+  font-size: 1rem;
+}
+
+/* Status Styling */
+td .status-active {
+  color: #28a745;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+td .status-inactive {
+  color: #dc3545;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* Action Buttons */
+td .edit-btn, td .delete-btn {
+  background-color: #0078d7;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+td .edit-btn:hover {
+  background-color: #31a30b;
+  transform: scale(1.05);
+}
+
+td .delete-btn:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .banner h1 {
+      font-size: 2.2rem;
+  }
+
+  .banner p {
+      font-size: 1rem;
+  }
+
+  .banner .add-btn {
+      font-size: 0.9rem;
+      padding: 10px 15px;
+  }
+
+  table {
+      font-size: 0.9rem;
+  }
+
+  th, td {
+      padding: 10px;
+  }
+
+  td .edit-btn, td .delete-btn {
+      padding: 8px 10px;
+      font-size: 0.9rem;
+  }
+}
+
+/* Modal Styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.modal-content form label {
+  display: block;
+  font-size: 1rem;
+  color: #555;
+  margin: 10px 0 5px;
+}
+
+.modal-content form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.modal-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.modal-actions button:first-child {
+  background-color: #0078d7;
+  color: #fff;
+}
+
+.modal-actions button:first-child:hover {
+  background-color: #0056a6;
+  transform: scale(1.05);
+}
+
+.modal-actions button:last-child {
+  background-color: #d32f2f;
+  color: #fff;
+}
+
+.modal-actions button:last-child:hover {
+  background-color: #a02020;
+  transform: scale(1.05);
+}
+/* General Styling */
+.tenant-management {
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Banner Section */
+.banner {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 30px 15px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.banner h1 {
+  font-size: 2.8rem;
+  color: #0078d7;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.banner .add-btn {
+  background-color: #0078d7;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.banner .add-btn:hover {
+  background-color: #0056a6;
+  transform: translateY(-2px);
+}
+
+/* Table Styling */
+.tenant-table {
+  margin-top: 20px;
+  overflow-x: auto;
+  border-radius: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+  background-color: #0078d7;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+td {
+  background-color: #ffffff;
+  font-size: 1rem;
+}
+
+/* Modal Styling for Add Tenant */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; /* Initially hidden */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal.show {
+  display: flex; /* Show modal when triggered */
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.modal-content form label {
+  display: block;
+  font-size: 1rem;
+  color: #555;
+  margin: 10px 0 5px;
+}
+
+.modal-content form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.modal-content form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.modal-actions button:first-child {
+  background-color: #0078d7;
+  color: #fff;
+}
+
+.modal-actions button:first-child:hover {
+  background-color: #0056a6;
+  transform: scale(1.05);
+}
+
+.modal-actions button:last-child {
+  background-color: #d32f2f;
+  color: #fff;
+}
+
+.modal-actions button:last-child:hover {
+  background-color: #a02020;
+  transform: scale(1.05);
+}
+
+/* Responsive Modal */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+  }
+}

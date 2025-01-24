@@ -1,0 +1,43 @@
+
+.service-card {
+    background-color: #f0f0f0;
+    color: #002B5B;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .service-card:hover {
+    background-color: #00509E;
+    color: white;
+  }
+  
+  .sale-page {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .sale-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  
+  .sale-button {
+    padding: 0.8rem 2rem;
+    background-color: #00509E;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  .sale-button:hover {
+    background-color: #003B7B;
+  }
+  

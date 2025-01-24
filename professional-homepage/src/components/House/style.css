@@ -1,0 +1,55 @@
+.house-list {
+    text-align: center;
+  }
+  
+  .house-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .house-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    cursor: pointer;
+    width: 300px;
+    text-align: center;
+    transition: 0.3s;
+  }
+  
+  .house-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .house-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .house-details {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .gallery-image {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px;
+  }
+  
+  .booking-form input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+  }
+  
+  .book-btn, .close-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 10px;
+  }
+  

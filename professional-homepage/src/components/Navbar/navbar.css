@@ -1,0 +1,140 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Space between logo and nav-links */
+  align-items: center; /* Vertically center the logo and nav-links */
+  background-color: #002B5B;
+  padding: 1rem;
+  color: white;
+  position: relative; /* Ensure dropdowns and menus are contained */
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex; /* Horizontal alignment */
+  gap: 1rem; /* Spacing between buttons */
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.nav-links.show {
+  display: flex; /* Keep horizontal alignment when the menu is toggled */
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a,
+.nav-links button {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 5px; /* Optional: Adds a smooth rounded edge */
+}
+
+.nav-links a:hover,
+.nav-links button:hover {
+  color: #fff;
+  background-color: #00509E; /* Adds a subtle hover background */
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #002B5B;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: max-content;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu a {
+  color: white;
+  display: block; /* Ensures the entire item is clickable */
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #002B5B;
+}
+
+.dropdown-menu a:hover {
+  background-color: #00509E;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: rgb(14, 191, 240);
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #002B5B;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem 0;
+    gap: 0.5rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center; /* Center menu items */
+  }
+
+  .dropdown-menu {
+    position: relative;
+    box-shadow: none;
+    width: 100%;
+    background-color: #002B5B;
+    padding: 0;
+  }
+
+  .dropdown-menu.show {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dropdown-menu li {
+    text-align: center;
+  }
+
+  .dropdown-menu a {
+    padding: 1rem;
+    width: 100%;
+    text-align: center; /* Center dropdown links */
+  }
+}

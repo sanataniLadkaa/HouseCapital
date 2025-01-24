@@ -1,0 +1,64 @@
+/* General Styling */
+.assistance {
+    padding: 40px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: white;
+  }
+  
+  .banner {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .banner h1 {
+    font-size: 3rem;
+    color: #333;
+  }
+  
+  .banner p {
+    font-size: 1.4rem;
+    color: #666;
+    margin-top: 10px;
+  }
+  
+  /* Content Styling */
+  .content {
+    margin-top: 40px;
+  }
+  
+  .section {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #0078d7;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .banner h1 {
+      font-size: 2.2rem;
+    }
+  
+    .banner p {
+      font-size: 1.2rem;
+    }
+  
+    .section p {
+      font-size: 1rem;
+    }
+  }
+  

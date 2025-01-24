@@ -1,0 +1,326 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+/* Homepage */
+.homepage {
+  text-align: center;
+  color: #1085eb;
+}
+
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #002B5B;
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav a {
+  margin: 0 1.5rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #002B5B, #00A4CC);
+  color: #fff;
+  padding: 6rem 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #81e713;
+}
+
+.cta-button {
+  padding: 0.8rem 2.5rem;
+  background-color: #FF6F61;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #FF3B2F;
+}
+
+/* Section Styling */
+.section {
+  padding: 3.5rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.section:nth-child(even) {
+  background-color: #e3e3e3;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #002B5B;
+}
+
+/* Service Cards */
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  color: #002B5B;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.service-card:hover {
+  background-color: #00509E;
+  color: white;
+  transform: translateY(-5px);
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #002B5B;
+  color: rgb(255, 255, 255);
+  padding: 1.5rem 2rem;
+  margin-top: 3rem;
+}
+  
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  z-index: 100;
+  top: 50px; /* Adjust this depending on your layout */
+  left: 0;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px;
+  color: #002B5B;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #00509E;
+  color: white;
+}
+
+/* Ensure the service card has relative positioning */
+.services-container {
+  position: relative;
+}
+
+.service-card {
+  padding: 1.2rem;
+  background-color: #f0f0f0;
+  color: #002B5B;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  background-color: #00509E;
+  color: white;
+  transform: translateY(-5px);
+}
+/* Dropdown Menu Styling */
+.dropdown-menu {
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  z-index: 100;
+  top: 40px; /* Adjust to ensure it appears below the Renting card */
+  left: 0;
+  border-radius: 5px;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px;
+  color: #002B5B;
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background-color: #00509E;
+  color: white;
+}
+
+.service-card {
+  background-color: #f0f0f0;
+  color: #002B5B;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.service-card:hover {
+  background-color: #00509E;
+  color: white;
+}
+
+.renting-page {
+  text-align: center;
+  padding: 2rem;
+}
+
+.renting-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.renting-button {
+  padding: 0.8rem 2rem;
+  background-color: #00509E;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.renting-button:hover {
+  background-color: #003B7B;
+}
+
+
+.sale-page {
+  text-align: center;
+  padding: 2rem;
+}
+
+.sale-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.sale-button {
+  padding: 0.8rem 2rem;
+  background-color: #00509E;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.sale-button:hover {
+  background-color: #003B7B;
+}
+
+
+/* Start the section off-screen */
+.section {
+  position: relative;
+  opacity: 0;
+  transform: translateX(100%); /* Initially off to the right */
+  animation: slideIn 1s forwards; /* Animation that moves it in */
+  animation-delay: 0.5s; /* Optional delay before the animation starts */
+  
+}
+
+
+/* Define the animation */
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%); /* Start from the right side */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* Move to original position */
+    opacity: 1; /* Make it fully visible */
+  }
+}
+
+
+.chatbot-button {
+  position: fixed;
+  bottom: 20px; /* Distance from bottom of the screen */
+  right: 20px; /* Distance from the right side of the screen */
+  background: repeating-linear-gradient(
+      45deg,
+      #940488,
+      #940488 10px,
+      #d414c4 10px,
+      #d414c4 20px
+  ); /* Grid-like gradient effect */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Makes the button circular */
+  width: 60px; /* Button size */
+  height: 60px; /* Button size */
+  font-size: 14px; /* Icon size */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  cursor: pointer;
+  z-index: 1000; /* Ensures it stays above other elements */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+.chatbot-button:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  background-color: #610b9e; /* Darker blue on hover */
+}
+
+
+
+/* You can adjust the duration of the animation and delay as needed */
