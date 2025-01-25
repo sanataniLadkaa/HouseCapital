@@ -8,7 +8,7 @@ const PORT = 5000;
 
 // Middleware
 app.use(cors({
-  origin: 'https://frontend-tau-ochre-74.vercel.app/', // Allow requests only from your frontend
+  origin: 'https://frontend-tau-ochre-74.vercel.app', // Allow requests only from your frontend
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
 }));
@@ -55,7 +55,8 @@ app.get('/api/tenants', async (req, res) => {
   }
 });
 
-app.post('/api/tenants', async (req, res) => {
+// Modify POST Route for Tenants
+app.post('/api/tenants', async (req, res) => {  // Fix: removed extra URL in the post route
   const { name, apartment, status, contact } = req.body;
   const newTenant = new Tenant({ name, apartment, status, contact });
   try {
