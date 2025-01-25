@@ -2,9 +2,11 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/server.js",
+      "src": "api/index.js",
       "use": "@vercel/node"
     }
-  ]
+  ],
+  "env": {
+    "MONGODB_URI": "your_mongo_uri_here"
+  }
 }
-
