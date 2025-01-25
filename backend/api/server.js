@@ -15,7 +15,7 @@ app.use(cors({
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://AnuragTiwari:<db_password>@<hostname>/?ssl=true&replicaSet=atlas-sb485l-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect('mongodb://AnuragTiwari:Anurag/?ssl=true&replicaSet=atlas-sb485l-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
