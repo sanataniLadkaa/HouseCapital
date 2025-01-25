@@ -8,7 +8,7 @@ const PORT = 5000;
 
 // Middleware
 app.use(cors({
-  origin: 'https://frontend-git-master-anurag-tiwaris-projects-dc780ff2.vercel.app/', // Allow requests only from your frontend
+  origin: 'https://frontend-sigma-lime.vercel.app/', // Allow requests only from your frontend
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
 }));
