@@ -146,12 +146,9 @@ app.post('/api/contact', (req, res) => {
   res.status(200).json({ message: 'Form submitted successfully!' });
 });
 
-// Health check route
 app.get('/', (req, res) => {
   res.send('Backend is running!');
 });
 
-// Start the server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+// Export the app as a Vercel function
+module.exports = app;
