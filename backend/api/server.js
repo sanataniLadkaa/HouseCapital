@@ -15,7 +15,7 @@ app.use(cors({
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/rental-management', {
+mongoose.connect('mongodb://<AnuragTiwari>:<Anurag>@<cluster>.mongodb.net/rental-management', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
