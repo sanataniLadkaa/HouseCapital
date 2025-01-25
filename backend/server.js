@@ -7,7 +7,11 @@ const app = express();
 const PORT = 5000;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://house-capital.vercel.app', // Allow requests only from your frontend
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
+}));
 app.use(bodyParser.json());
 
 // Connect to MongoDB
