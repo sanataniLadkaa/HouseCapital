@@ -6,7 +6,7 @@
       "use": "@vercel/node"
     },
     {
-      "src": "professional-homepage/**/*",
+      "src": "professional-homepage/src/**/*",
       "use": "@vercel/static-build"
     }
   ],
@@ -17,7 +17,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/professional-homepage/$1"
+      "dest": "/professional-homepage/public/index.html"
     }
   ]
 }
