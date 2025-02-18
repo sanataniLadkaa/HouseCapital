@@ -15,16 +15,15 @@ app.use(cors({
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://Anurag:Anurag@cluster0.gkt1y.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'Connection error:'));
-db.once('open', () => {
-  console.log('Connected to MongoDB');
-});
+const connectDB = async() => {
+  try {
+    await mongoose.connect('mongodb+srv://Anurag:anurag@cluster0.ack3l.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+    console.log("mongodb connected");
+  } catch (error) {
+    console.log("connection error ",error)
+  }
+}
+connectDB()
 
 // Mongoose Schemas
 const tenantSchema = new mongoose.Schema({
