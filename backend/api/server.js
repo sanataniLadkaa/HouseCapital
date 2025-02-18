@@ -7,19 +7,24 @@ const app = express();
 const PORT = 5000;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://frontend-sigma-lime.vercel.app/', // Allow requests only from your frontend
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
+}));
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017', {
+mongoose.connect('mongodb+srv://Anurag:Anurag@cluster0.gkt1y.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Connection error:'));
 db.once('open', () => {
   console.log('Connected to MongoDB');
-})
+});
 
 // Mongoose Schemas
 const tenantSchema = new mongoose.Schema({
@@ -50,7 +55,8 @@ app.get('/api/tenants', async (req, res) => {
   }
 });
 
-app.post('/api/tenants', async (req, res) => {
+// Modify POST Route for Tenants
+app.post('/api/tenants', async (req, res) => {  // Fix: removed extra URL in the post route
   const { name, apartment, status, contact } = req.body;
   const newTenant = new Tenant({ name, apartment, status, contact });
   try {
@@ -142,12 +148,9 @@ app.post('/api/contact', (req, res) => {
   res.status(200).json({ message: 'Form submitted successfully!' });
 });
 
-// Health check route
 app.get('/', (req, res) => {
   res.send('Backend is running!');
 });
 
-// Start the server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+// Export the app as a Vercel function
+module.exports = app;

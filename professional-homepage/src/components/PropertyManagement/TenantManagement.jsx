@@ -9,7 +9,7 @@ const TenantManagement = () => {
 
   // Fetch tenants from the backend
   useEffect(() => {
-    fetch('http://localhost:5000/api/tenants')
+    fetch('https://house-capital.vercel.app/api/tenants')
       .then((response) => response.json())
       .then((data) => setTenantList(data))
       .catch((error) => console.error('Error fetching tenants:', error));
@@ -18,7 +18,7 @@ const TenantManagement = () => {
   // Toggle tenant status
   const handleStatusToggle = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/tenants/${id}/toggle-status`, {
+      const response = await fetch(`https://house-capital.vercel.app/api/tenants/${id}/toggle-status`, {
         method: 'PATCH',
       });
       const updatedTenant = await response.json();
@@ -34,7 +34,7 @@ const TenantManagement = () => {
   const handleAddTenant = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/tenants', {
+      const response = await fetch('https://house-capital.vercel.app/api/tenants', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newTenant),
@@ -51,7 +51,7 @@ const TenantManagement = () => {
   const handleEditTenant = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:5000/api/tenants/${currentTenant.id}`, {
+      const response = await fetch(`https://house-capital.vercel.app/api/tenants/${currentTenant.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(currentTenant),
@@ -70,7 +70,7 @@ const TenantManagement = () => {
   // Delete a tenant
   const handleDeleteTenant = async (id) => {
     try {
-      await fetch(`http://localhost:5000/api/tenants/${id}`, {
+      await fetch(`https://house-capital.vercel.app/api/tenants/${id}`, {
         method: 'DELETE',
       });
       setTenantList((prevList) => prevList.filter((tenant) => tenant.id !== id));

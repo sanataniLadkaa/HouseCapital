@@ -2,11 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom'; // Correct import for Link
 import './style.css';
 import PurchasePage from '../House/PurchasePage';
+import axios from 'axios';
 
 
 const Home = () => {
   
-
+  useEffect(() => {
+    const fetchServices = async () => {
+      try {
+        const response = await axios.get('https://house-capital.vercel.app/api/services');
+        setServices(response.data);
+      } catch (error) {
+        console.error('Error fetching services:', error);
+      }
+    };
   const openChatbot = () => {
     const chatbotWindow = window.open(
       'chat.html',  // Path relative to public directory
