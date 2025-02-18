@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Define the base URL of your backend
 const api = axios.create({
-  baseURL: 'https://house-capital.vercel.app/' || 'http://localhost:5000/api',
+  baseURL: 'https://backend-git-master-anurag-tiwaris-projects-dc780ff2.vercel.app/' || 'http://localhost:5000/api',
   timeout: 5000, // Optional: Set a timeout
 });
 
