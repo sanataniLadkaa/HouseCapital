@@ -26,12 +26,5 @@
     "apartment": "C-432",
     "status": "Active",
     "contact": "+0938329880"
-  },
-  {
-    "id": 7,
-    "name": "Amit",
-    "apartment": "C-45",
-    "status": "Active",
-    "contact": "+09984349"
   }
 ]
